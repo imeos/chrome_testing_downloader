@@ -2,6 +2,7 @@ namespace :chrome do
   desc 'Download Chrome For Testing'
   task download: :environment do
     ChromeTestingDownloader.chrome_path
+    ChromeTestingDownloader.chromedriver_path
   end
 
   desc 'Check Chrome For Testing version'

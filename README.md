@@ -1,6 +1,6 @@
 # chrome_testing_downloader
 
-chrome_testing_downloader is a Ruby gem to download and use any version of "Chrome For Testing" in Ruby on Rails system tests.
+chrome_testing_downloader is a Ruby gem to download and use any version of [Chrome For Testing](https://developer.chrome.com/blog/chrome-for-testing) in Ruby on Rails system tests.
 
 Forked from [SonicGarden/chrome_testing_downloader](https://github.com/SonicGarden/chrome_testing_downloader).
 

@@ -9,7 +9,13 @@ module ChromeTestingDownloader
   JSON_URL = 'https://googlechromelabs.github.io/chrome-for-testing/last-known-good-versions.json'
 
   def chrome_path
+    # @puppeteer/browsers package handles caching and version checking internally
     output = `npx -y @puppeteer/browsers install chrome@#{required_version} --path #{cache_directory}`
+    output.split(' ', 2).last.chomp
+  end
+
+  def chromedriver_path
+    output = `npx -y @puppeteer/browsers install chromedriver@#{required_version} --path #{cache_directory}`
     output.split(' ', 2).last.chomp
   end
 
@@ -30,5 +36,5 @@ module ChromeTestingDownloader
     json.dig('channels', channel, 'version')
   end
 
-  module_function :chrome_path, :required_version, :version_file_path, :cache_directory, :latest_version
+  module_function :chrome_path, :chromedriver_path, :required_version, :version_file_path, :cache_directory, :latest_version
 end
