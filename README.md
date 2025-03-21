@@ -1,6 +1,8 @@
 # chrome_testing_downloader
 
-chrome_testing_downloader is a Ruby gem for downloading test versions of Google Chrome.
+chrome_testing_downloader is a Ruby gem to download and use any version of "Chrome For Testing" in Ruby on Rails system tests.
+
+Forked from [SonicGarden/chrome_testing_downloader](https://github.com/SonicGarden/chrome_testing_downloader).
 
 ## Required
 
@@ -13,7 +15,7 @@ Add the following line to your Gemfile and run bundle install:
 
 ```ruby
 group :development, :test do
-  gem 'chrome_testing_downloader', github: 'SonicGarden/chrome_testing_downloader'
+  gem 'chrome_testing_downloader', github: 'imeos/chrome_testing_downloader'
 end
 ```
 
@@ -28,6 +30,7 @@ bundle exec rake chrome:update_version
 In `spec/rails_helper.rb`
 ```ruby
 Selenium::WebDriver::Chrome.path = ChromeTestingDownloader.chrome_path
+Selenium::WebDriver::Chrome::Service.driver_path = ChromeTestingDownloader.chromedriver_path
 ```
 
 ## Rake Tasks
@@ -41,7 +44,3 @@ The gem provides the following Rake tasks:
 ## License
 
 The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
-
-## Code of Conduct
-
-Everyone interacting in the ChromeTestingDownloader project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/[USERNAME]/chrome_testing_downloader/blob/main/CODE_OF_CONDUCT.md).

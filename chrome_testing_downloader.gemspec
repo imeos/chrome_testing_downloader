@@ -5,12 +5,12 @@ require_relative 'lib/chrome_testing_downloader/version'
 Gem::Specification.new do |spec|
   spec.name = 'chrome_testing_downloader'
   spec.version = ChromeTestingDownloader::VERSION
-  spec.authors = ['aki77']
-  spec.email = ['aki77@users.noreply.github.com']
+  spec.authors = ['chris']
+  spec.email = ['chris@imeos.com']
 
-  spec.summary = 'A helper to use Chrome For Testing in system spec.'
-  spec.description = 'A helper to use Chrome For Testing in system spec.'
-  spec.homepage = 'https://github.com/SonicGarden/chrome_testing_downloader'
+  spec.summary = 'A small tool to download and use any version of "Chrome For Testing" in Ruby on Rails system tests.'
+  spec.description = 'Download and use any version of "Chrome For Testing" in Rails system tests.'
+  spec.homepage = 'https://github.com/imeos/chrome_testing_downloader'
   spec.license = 'MIT'
   spec.required_ruby_version = '>= 3.0.0'
 
